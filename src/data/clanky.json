@@ -3,8 +3,17 @@
     {
         "nadpis":"Test",
         "autor":["Marek Polifka"],
+        "kratky_popis":"Testovaci kratky popis",
         "obsah":"TEST test Test TEst TEST test Test TEst TEST test Test TEstTEST test Test TEst",
         "datum_napsani":"23.10.2015"
     },
-    "next_id": 2
+    "2":
+    {
+        "nadpis":"Test 2",
+        "autor":["Vaclav Vocas"],
+        "kratky_popis":"Dalsi testovaci kratky popis",
+        "obsah":"TEST test Test TEst TEST test Test TEst TEST test Test TEstTEST test Test TEst",
+        "datum_napsani":"23.10.2015"
+    },
+    "next_id": 3
 }

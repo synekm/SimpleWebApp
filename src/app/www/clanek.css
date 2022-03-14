@@ -1,0 +1,21 @@
+/*
+    CSS clanku
+*/
+
+.clanek
+{
+    min-height: 200px;
+    background-color: rgb(56, 78, 97);
+}
+
+.clanek h2
+{
+    font-weight: 100;
+    text-align: center;
+    padding: 5px;
+}
+
+.clanek .kratky_popis
+{
+    padding: 5px;
+}
