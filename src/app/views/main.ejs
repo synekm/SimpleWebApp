@@ -13,11 +13,10 @@
         <h1 class="text-center">Školní noviny</h1>
     </header>
     <main class="col-10 h-100 p-4 shadow text-light ">
-        <p>dsadsagf</p>
-        <p>dgfdv</p>
-        <p>cbvcbfd</p>
-        <p>dadsa</p>
-        <p>csacsafsa</p>>
+        <% for (i in data) { %>
+            <h2><%= data[i].nazev %></h2>
+            <a href="/clanek/detail/<%= i %>">Více</a>
+        <% } %>
     </main>
     <footer>
         <p>&copy; Martin Synek, Tadeáš Poliak, Jan Petrů</p>
