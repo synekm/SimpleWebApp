@@ -12,3 +12,10 @@ exports.nacistVse = () =>
 
     return clanky;
 }
+
+exports.nacistJeden = (id) =>
+{
+    let clanek = db.get(id);
+
+    return clanek;
+}
