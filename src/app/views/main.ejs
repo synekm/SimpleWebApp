@@ -11,20 +11,19 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="clanek.css">
+    <link rel="stylesheet" href="global.css">
     <title>Hlavní stránka</title>
 </head>
 
 <body class="h-100">
-    <header class="p-5 col-10 ">
-        <h1 class="text-center">Školní noviny</h1>
-    </header>
+    <%- include("../spolecne/hlavicka.ejs") -%>   
     <main class="col-10 h-100 p-4">
         <div class="col-12 row d-flex justify-content-center m-0">
         <!--k - pro mezeru mezi clanky-->
         <% let k=0; %>
             <% for (i in data) { %>
-                <% k=k+1; %>
-                    <div class="clanek col-5">
+                <% k++; %>
+                    <div class="clanek col-5 shadow-lg">
                         <div class="col-12">
                             <h2 class="">
 

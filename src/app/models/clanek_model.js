@@ -32,7 +32,7 @@ exports.nahratClanek = (id, nazev, telo) =>
     });
 }
 
-exports.nacistJeden = (id) =>
+exports.nacistClanek = (id) =>
 {
     let clanek = db.get(id);
 

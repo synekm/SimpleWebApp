@@ -5,7 +5,7 @@
 .clanek
 {
     min-height: 200px;
-    background-color: rgb(56, 78, 97);
+    background-color: rgb(65, 88, 109);
 }
 
 .clanek h2
@@ -18,4 +18,19 @@
 .clanek .kratky_popis
 {
     padding: 5px;
+    font-size: 1.1em;
+}
+
+.clanek a
+{
+    color: white;
+    font-weight: 600;
+
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 200ms;
+}
+.clanek a:hover
+{
+    text-decoration-color: white;
 }
