@@ -1,0 +1,2 @@
+# SimpleWebApp
+Skolni noviny
