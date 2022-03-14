@@ -1,0 +1,24 @@
+{
+  "name": "skolni-noviny",
+  "version": "1.0.0",
+  "description": "Skolni noviny",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synekm/SimpleWebApp.git"
+  },
+  "author": "Martin Synek, Poliak Tadeas, Petru Jan",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/synekm/SimpleWebApp/issues"
+  },
+  "homepage": "https://github.com/synekm/SimpleWebApp#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  }
+}
