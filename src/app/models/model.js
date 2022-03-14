@@ -8,8 +8,6 @@ exports.nacistVse = () =>
 {
     let clanky = db.JSON();
 
-    delete clanky['next_id'];
-
     return clanky;
 }
 

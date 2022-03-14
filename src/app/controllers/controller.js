@@ -8,6 +8,11 @@ exports.main=(req,res)=>
     res.render("main", {data});
 }
 
+exports.nahrani = (req, res) =>
+{
+    res.render("nahrani");
+}
+
 exports.detail = (req, res) =>
 {
     let id = req.params.id;
