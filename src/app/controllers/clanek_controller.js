@@ -1,4 +1,5 @@
-
+const path = require('path');
+const model = require(path.join(__dirname, '..', 'models', 'model'));
 
 exports.nahrani = (req, res) =>
 {
@@ -8,15 +9,17 @@ exports.nahrani = (req, res) =>
 exports.nahrat = (req, res) =>
 {
     let id = model.getID();
-    let nazev = req.body.nazev;
-    let telo = req.body.telo;
-
-    console.log(id + " " +  nazev + " " + telo);
+    let nadpis = req.body.nadpis;
+    let obsah = req.body.obsah;
+    let datum = req.body.datum;
+    let autori = req.body.autori.split(',');
     
     model.nahratClanek(
         id,
-        nazev,
-        telo
+        nadpis,
+        obsah,
+        autori,
+        datum
     );
 
     res.redirect('/');
