@@ -23,12 +23,13 @@ exports.nacistVse = () =>
     return clanky;
 }
 
-exports.nahratClanek = (id, nazev, autori, obsah, datum_napsani) =>
+exports.nahratClanek = (id, nazev, autori, obsah, datum_napsani, kratkyPopis) =>
 {
     db.set("next_id", db.get("next_id")+1);
     db.set(id,{
         nazev,
         autori,
+        kratkyPopis,
         obsah,
         datum_napsani
     });

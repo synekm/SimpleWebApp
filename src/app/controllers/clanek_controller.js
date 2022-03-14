@@ -13,13 +13,15 @@ exports.nahrat = (req, res) =>
     let obsah = req.body.obsah;
     let datum = req.body.datum;
     let autori = req.body.autori.split(',');
+    let kratkyPopis = req.body.kratkyPopis;
     
     model.nahratClanek(
         id,
         nadpis,
         obsah,
         autori,
-        datum
+        datum,
+        kratkyPopis
     );
 
     res.redirect('/');
