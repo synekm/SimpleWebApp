@@ -1,10 +1,12 @@
 const path = require('path');
-const model = require(path.join(__dirname, '..', 'models', 'model'));
+const clanek_model = require(path.join(__dirname, '..', 'models', 'clanek_model'));
 
 exports.nahrani = (req, res) =>
 {
     res.render("clanek/nahrani");
 }
+
+
 
 exports.nahrat = (req, res) =>
 {
@@ -26,3 +28,9 @@ exports.nahrat = (req, res) =>
 
     res.redirect('/');
 }
+
+exports.detail_clanek = (req,res) =>
+{
+    let data = clanek_model.nacistClanek(req.params.id);
+    res.render("clanek/detail",{data})
+};
