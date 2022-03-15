@@ -10,14 +10,14 @@ exports.nahrani = (req, res) =>
 
 exports.nahrat = (req, res) =>
 {
-    let id = model.getID();
+    let id = clanek_model.getID();
     let nadpis = req.body.nadpis;
     let obsah = req.body.obsah;
     let datum = req.body.datum;
     let autori = req.body.autori.split(',');
     let kratkyPopis = req.body.kratkyPopis;
     
-    model.nahratClanek(
+    clanek_model.nahratClanek(
         id,
         nadpis,
         obsah,
