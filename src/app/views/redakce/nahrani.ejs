@@ -7,9 +7,8 @@
     <title>Nový článek</title>
 </head>
 <body>
-    <header>
-        <h1>Vytvoření nového článku</h1>
-    </header>
+    <%- include("../spolecne/hlavicka.ejs") -%>
+    <h1>Vytvoření nového článku</h1>
     <main>
         <form action="/clanek/nahrat" method="POST">
             <p>Vložte název článku</p> <input type="text" name="nadpis" id="">
@@ -20,8 +19,6 @@
             <button type="submit">Potvrdit</button>
         </form>
     </main>
-    <footer>
-        <p>&copy; Martin Synek, Tadeáš Poliak, Jan Petrů</p>
-    </footer>
+    <%- include("../spolecne/paticka.ejs") -%>
 </body>
 </html>
