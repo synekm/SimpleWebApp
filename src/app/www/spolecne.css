@@ -1,0 +1,33 @@
+header button
+{
+    background-color: rgb(52, 86, 123);
+    border-radius: 2px;
+    border: none;
+    box-shadow: 1px 1px 10px black;
+    color: white;
+    height: 35px;
+    width: 60px;
+}
+
+header a
+{
+    text-decoration: none;
+    color: white;
+    transform: scale(1);
+    transition: 100ms;
+}
+header a:hover
+{
+    color: white;
+    transform: scale(1.2);
+}
+
+header h1
+{
+    transform: scale(1);
+    transition: 100ms;
+}
+header h1:hover
+{
+    transform: scale(1.1);
+}

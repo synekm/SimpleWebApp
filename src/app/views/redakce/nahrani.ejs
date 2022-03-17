@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/spolecne.css">
+    <link rel="stylesheet" href="/redakce/form.css">
     <title>Nový článek</title>
 </head>
+
 <body>
     <%- include("../spolecne/hlavicka.ejs") -%>
-    <h1>Vytvoření nového článku</h1>
-    <main>
-        <form action="/clanek/nahrat" method="POST">
-            <p>Vložte název článku</p> <input type="text" name="nadpis" id="">
-            <p>Autoři (oddělovač je ,)</p> <input type="text" name="autori" id="">
-            <p>Krátký popis článku</p> <input type="text" name="kratkyPopis" id="">
-            <p>Vložte obsah článku</p> <input type="text" name="obsah" id="">
-            <p>Datum</p> <input type="date" name="datum" id="">
-            <button type="submit">Potvrdit</button>
-        </form>
-
-        <a href="/redakce/odhlaseni"><input type="button" value="Logout"></a>
-    </main>
-    <%- include("../spolecne/paticka.ejs") -%>
+        <div class="col-12 row">
+        <h2 class="col-6 d-flex justify-content-end">Vytvoření nového článku</h2>
+         <div class="col-6 d-flex justify-content-end"><a  href="/redakce/odhlaseni"> <input type="submit" value="Odhlásit se"></a></div>
+        </div>
+        <main>
+            <div class="col-6 m-0-a">
+                <form action="/redakce/nahrat" method="POST">
+                    <div class="col-5 m-0-a">
+                        <label>Vložte název článku</label> 
+                        <input class="p-3 col-12" type="text" name="nadpis" id="">
+                    </div>
+                    <div class="col-5 m-0-a">
+                        <label>Autoři (autory oddělte <b>,</b>)</label> 
+                        <input class="p-3 col-12" type="text" name="autori" id="">
+                    </div>
+                    <div class="col-5 m-0-a">
+                        <label>Krátký popis článku</label> 
+                        <textarea class="p-3 col-12" name="kratkyPopis" id=""> </textarea>
+                    </div>
+                    <div class="col-5 m-0-a">
+                        <label>Vložte obsah článku</label> 
+                        <input class="p-3 col-12" type="text" name="obsah" id="">
+                    </div>
+                    <div class="col-5 m-0-a">
+                        <label for="">Datum</label>
+                        <input class="p-3 col-12" type="date" name="datum" id="">
+                    </div>
+                    <div class="col-8 m-0-a row">
+                        <div class="col-4"></div>
+                        <input class="m-3 p-1 col-4"  type="submit" value="Potvrdit">
+                        <div class="col-4"></div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <%- include("../spolecne/paticka.ejs") -%>
 </body>
+
 </html>
