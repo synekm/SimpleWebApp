@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/synekm/SimpleWebApp#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "express-session": "^1.17.2",
     "nodemon": "^2.0.15",
     "path": "^0.12.7",
     "simple-json-db": "^2.0.0"

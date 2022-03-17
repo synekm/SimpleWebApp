@@ -10,10 +10,35 @@
         <h1>Redakce</h1>
     </header>
     <main>
-
+        <p id="prihlasovaci_jmeno">Jméno:</p>
+        <input type="text" id="username" placeholder="Username.."  required> <br>
+        <p id="heslo">Heslo:</p>
+        <input type="password" id="password" placeholder="Password.."  required>
+        <input id="submit" type="submit" onclick="SendLoginInfo()" value="Přihlásit"></a>
+        <script>
+            function SendLoginInfo(){
+                fetch('/redakce/loginInfo', {
+                    method:"POST",
+                    headers: {"Content-type":"application/json"},
+                    body:JSON.stringify({   
+                        "username":username.value,
+                        "password":password.value
+                        })
+                }).then(response => response.json()).then(data => {
+                    switch(data.status) {
+                       case 100: {
+                           location.href = "/redakce/porovnat"
+                           break;
+                       }
+                       default: {
+                           console.log("Error", data.status)
+                           break;
+                       }
+                    }
+                })
+            }
+        </script>
     </main>
-    <footer>
-        <p>&copy; Martin Synek, Tadeáš Poliak, Jan Petrů</p>
-    </footer>
+    <%- include("../spolecne/paticka.ejs") -%>
 </body>
 </html>
