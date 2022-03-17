@@ -35,7 +35,7 @@ exports.nahratClanek = (id, nadpis, obsah, autor, datum_napsani, kratky_popis) =
     });
 }
 
-exports.nacistJeden = (id) =>
+exports.nacistClanek = (id) =>
 {
     let clanek = db.get(id);
 
