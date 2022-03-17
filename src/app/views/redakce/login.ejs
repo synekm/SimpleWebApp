@@ -10,7 +10,7 @@
         <h1>Redakce</h1>
     </header>
     <main>
-        <p id="prihlasovaci_jmeno">Jméno:</p>
+       <!-- <p id="prihlasovaci_jmeno">Jméno:</p>
         <input type="text" id="username" placeholder="Username.."  required> <br>
         <p id="heslo">Heslo:</p>
         <input type="password" id="password" placeholder="Password.."  required>
@@ -37,7 +37,14 @@
                     }
                 })
             }
-        </script>
+        </script>-->
+
+        <form action="/redakce/loginInfo" method="POST">
+            <input type="text" name="username" placeholder="Username.."  required> <br>
+            <p id="heslo">Heslo:</p>
+            <input type="password" name="password" placeholder="Password.."  required>
+            <input id="submit" type="submit"  value="Přihlásit"></a>
+        </form>
     </main>
     <%- include("../spolecne/paticka.ejs") -%>
 </body>
