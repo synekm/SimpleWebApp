@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
-
-dotenv.config();
+const path = require("path");
+dotenv.config({"path":__dirname+"/.env"});
 
 module.exports = {
     host: process.env.HOST,

@@ -1,8 +1,8 @@
 const http = require("http");
 const path = require("path");
-
+const { host, port } = require(path.join(__dirname, 'config'));
 const server = http.createServer(require(path.join(__dirname, 'app')));
 
-server.listen(8000, "localhost", () => {
-    console.log(`Status: 200 (OK), http://localhost:8000`);
+server.listen(port, host, () => {
+    console.log("Status: 200 (OK), http://"+host+":"+port);
 });
