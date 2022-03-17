@@ -43,18 +43,18 @@ exports.postLoginInfo = (req, res) => {
 }
 
 exports.jePrihlasen = (req, res, next) => {
-    if (req.session.userid == undefined) {
-        next();
+    if (req.session.username == undefined) {
+        res.redirect("/redakce");
     }
-    if (req.session.userid == 'admin') {
-        res.redirect("/redakce/edit")
+    if (req.session.username == 'admin') {
+        next();
+        //res.redirect("/redakce/nahrani")
     }
 }
 
 exports.odhlasit = (req, res) => {
     req.session.username = undefined;
     req.session.password = undefined;
-    req.session.userid = undefined;
     res.send({"msg":{"status":100, "text":"Success"}})
 }
 

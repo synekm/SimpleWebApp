@@ -7,7 +7,7 @@ const app = express();
 const { key } = require(path.join(__dirname, '..', 'config'));
 
 app.use('/', session({
-    secret: "oof",
+    secret: key,
     secure: false,
     resave: false,
     saveUninitialized: false,
