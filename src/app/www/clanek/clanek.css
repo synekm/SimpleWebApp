@@ -1,5 +1,5 @@
 /*
-    CSS clanku
+    CSS jednotliveho clanku
 */
 
 .clanek
@@ -25,7 +25,6 @@
 {
     color: white;
     font-weight: 600;
-
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: 200ms;

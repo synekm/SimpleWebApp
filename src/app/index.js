@@ -24,8 +24,8 @@ app.use(express.static(path.join(__dirname, 'www')));
 app.use(express.json());
 app.use(express.urlencoded({ "extended": true }));
 
-app.use('/', require(path.join(__dirname, 'routers', 'router')));
+app.use('/', require(path.join(__dirname,'routers', 'clanek_router')));
 app.use('/clanek', require(path.join(__dirname, 'routers', 'clanek_router')));
-app.use('/redakce', require(path.join(__dirname, 'routers', 'redakcniRouter')));
+app.use('/redakce', require(path.join(__dirname, 'routers', 'redakcni_router')));
 
 module.exports = app;
