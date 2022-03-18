@@ -34,8 +34,15 @@ exports.nahrat = (req, res) =>
     res.redirect('/');
 }
 
+exports.smazat = (req, res) => {
+    var id = req.body.idProSmazani;
+    clanek_model.smazatClanek(id);
+
+    res.redirect('/');
+}
+
 //Ukladani prihlasovacich udaju do sessionu 
-exports.post_login_info = (req, res,next) => {
+exports.post_login_info = (req, res, next) => {
     req.session.username = req.body.username;
     req.session.password = req.body.password;
     next();

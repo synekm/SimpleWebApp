@@ -12,5 +12,6 @@ router.get('/nahrani', controller.jePrihlasen, controller.nahrani);
 router.post('/nahrat', controller.jePrihlasen, controller.nahrat);
 router.get('/odhlaseni', controller.jePrihlasen, controller.odhlasit)
 router.get('/porovnat', controller.jePrihlasen, controller.porovnat);
+router.post('/smazat', controller.jePrihlasen, controller.smazat);
 
 module.exports = router;
