@@ -22,10 +22,16 @@ header
     color: whitesmoke;
     background: rgb(25,35,44);
     background: linear-gradient(180deg, rgba(25,35,44,1) 0%, rgba(39,55,69,1) 66%, rgba(46,64,80,1) 100%);
-    margin: 0 auto;
+    margin: 0 auto !important;
 }
 
 h1
 {
     font-weight: 200;
+}
+
+
+.m-0-a
+{
+    margin: 0 auto;
 }

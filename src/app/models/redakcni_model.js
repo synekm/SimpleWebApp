@@ -1,5 +1,0 @@
-
-
-exports.porovnat = (req, res) => {
-
-}
