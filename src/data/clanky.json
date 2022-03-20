@@ -1,12 +1,19 @@
 {
-    "7": {
-        "nadpis": "test ",
-        "autor": [
-            "testtestetstetseet"
-        ],
-        "kratky_popis": "tetstetsets6te6stesteste ",
-        "obsah": "tafy fFI daiyugwdyui GYUwfg yuiag fyuiagfyu gauyfyuagfu ayufayuf yuafyufyuAGYUf ",
-        "datum_napsani": "3313-12-15"
+    "2": {
+        "nadpis": "test",
+        "autor": ["pepa,marek"],
+        "kratky_popis": " fd",
+        "obsah": "fds",
+        "datum_napsani": "2022-04-10"
     },
-    "next_id": 1
+    "3": {
+        "nadpis": "dsad",
+        "autor": [
+            "ret"
+        ],
+        "kratky_popis": " fdgd",
+        "obsah": "fgdwa",
+        "datum_napsani": "2022-03-05"
+    },
+    "next_id": 6
 }

@@ -8,11 +8,25 @@ exports.login_form = (req,res) =>
     res.render("redakce/login");
 }
 
-exports.nahrani = (req, res) =>
+exports.nahrani_form = (req, res) =>
 {
-    res.render("redakce/nahrani");
+    res.render("redakce/nahrani_clanku");
 }
 
+exports.prehled_clanku = (req, res) =>
+{
+    let clanky = clanek_model.nacistVse();
+    res.render("redakce/prehled_clanku",{clanky});
+}
+
+exports.uprava_clanku = (req, res) =>
+{
+    let clanek = clanek_model.nacistClanek(req.params.id);
+    clanek.id = req.params.id;
+    res.render("redakce/uprava_clanku",{clanek});
+}
+
+//Akce- narhani clanku do databaze
 exports.nahrat = (req, res) =>
 {
     let id = clanek_model.getID();
@@ -31,14 +45,28 @@ exports.nahrat = (req, res) =>
         kratkyPopis
     );
 
-    res.redirect('/');
+    res.redirect('/redakce/nahrani_clanku');
 }
 
-exports.smazat = (req, res) => {
-    var id = req.body.idProSmazani;
-    clanek_model.smazatClanek(id);
+//Akce - upraveni clanku
+exports.upravit = (req,res) =>
+{
+    clanek_model.nahratClanek(
+        req.params.id,
+        req.body.nadpis,
+        req.body.obsah,
+        req.body.autori,
+        req.body.datum,
+        req.body.kratkyPopis
+    );
 
-    res.redirect('/');
+}
+
+//Akce- Smazani clanku do databaze
+exports.smazat = (req, res) => {
+    var id = req.params.id;
+    clanek_model.smazatClanek(id);
+    res.redirect('/redakce/prehled_clanku');
 }
 
 //Ukladani prihlasovacich udaju do sessionu 
@@ -51,13 +79,9 @@ exports.post_login_info = (req, res, next) => {
 //Overeni zda je admin (redaktor) prihlaseny 
 exports.jePrihlasen = (req, res, next) => {
     if (req.session.userid == undefined)
-     {
         res.redirect("/redakce/login");
-    }
     if (req.session.userid == "admin") 
-    {
         next();
-    }
 }
 
 exports.odhlasit = (req, res) => 
@@ -65,7 +89,7 @@ exports.odhlasit = (req, res) =>
     req.session.username = undefined;
     req.session.password = undefined;
     req.session.userid = undefined;
-    res.send({"msg":{"status":100, "text":"Success"}})
+    res.redirect('/redakce/login')
 }
 
 exports.porovnat = (req, res) => {
@@ -74,7 +98,7 @@ exports.porovnat = (req, res) => {
             if(req.session.username == process.env.ADMIN_USERNAME && result == true)
             {
                 req.session.userid = 'admin';
-                res.redirect('/redakce/nahrani');
+                res.redirect('/redakce/nahrani_clanku');
             }
             else {
                 res.redirect('/redakce/login');

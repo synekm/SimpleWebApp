@@ -1,0 +1,36 @@
+table
+{
+    font-size: 1.1em;
+}
+
+table th
+{
+    text-align: center;
+}
+
+table th 
+{
+    border: 2px solid black;
+}
+table td 
+{
+    text-align: center;
+    padding: 5px;
+}
+
+#edit_button, #delete_button
+{
+    border: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+#edit_button
+{
+    background-color: rgb(40, 162, 24);
+}
+
+#delete_button
+{
+    background-color: rgb(172, 28, 28);
+}

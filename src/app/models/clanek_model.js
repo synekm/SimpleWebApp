@@ -35,10 +35,9 @@ exports.nahratClanek = (id, nadpis, obsah, autor, datum_napsani, kratky_popis) =
     });
 }
 
-exports.smazatClanek = (idProSmazani) => {
-    var odpoved = db.delete(idProSmazani);
-    
-    return odpoved;
+exports.smazatClanek = (idProSmazani) => 
+{
+     db.delete(idProSmazani);
 }
 
 exports.nacistClanek = (id) =>
